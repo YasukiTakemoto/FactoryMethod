@@ -1,20 +1,19 @@
 
 public class FactoryMethod {
 	public static void main(String[] args) {
-		SaxophoneCreator sc = new SaxophoneCreator();
-		TrumpetCreator tc = new TrumpetCreator();
+		AbstractCreator sc = new SaxophoneCreator();
+        AbstractCreator tc = new TrumpetCreator();
 
-		WindInstrumentProduct wp1 = sc.create();
-		WindInstrumentProduct wp2 = tc.create();
+        sc.setName("フォン");
+        tc.setName("トラン");
 
-		wp1.play();
-		wp2.play();
+        WindInstrumentProduct ins = sc.create();
+        WindInstrumentProduct ins2 = tc.create();
 
-		wp1.setPlate("ぷぉーんｗｗｗｗｗｗｗｗ");
-		wp2.setPlate("ぱぱぱぱーｗｗｗｗｗｗｗｗｗ");
-
-		wp1.play();
-		wp2.play();
+        ins.printPlate();
+        ins.play();
+        ins2.printPlate();
+        ins2.play();
 	}
 
 }
