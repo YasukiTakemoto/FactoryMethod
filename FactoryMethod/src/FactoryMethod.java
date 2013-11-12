@@ -9,6 +9,12 @@ public class FactoryMethod {
 
 		wp1.play();
 		wp2.play();
+
+		wp1.setPlate("ぷぉーんｗｗｗｗｗｗｗｗ");
+		wp2.setPlate("ぱぱぱぱーｗｗｗｗｗｗｗｗｗ");
+
+		wp1.play();
+		wp2.play();
 	}
 
 }
